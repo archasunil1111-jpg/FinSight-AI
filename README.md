@@ -129,7 +129,7 @@ Local databases, uploaded user files, temporary files, Python cache files, and v
 
 ---
 
-## 🖼️ Screenshots
+# 🖼️ Screenshots
 
 The following screenshots demonstrate the main FinSight-AI application workflow.
 
