@@ -168,11 +168,7 @@ Allows users to create and track financial goals using target amounts, current p
 
 Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
 
-### 🤖 AI Financial Agent
-
-![AI Financial Agent](screenshots/ai-financial-agent.png)
-
-Local AI financial assistant that explains application-prepared financial information and answers contextual financial questions.
+> **Note:** The AI Financial Agent is implemented in the application, but a screenshot is not currently included in the repository.
 
 > Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
 
@@ -227,8 +223,7 @@ FinSight-AI/
 │   ├── emergencyfund.png
 │   ├── financialhealth.png
 │   ├── goal.png
-│   ├── recurringbill.png
-│   
+│   └── recurringbill.png
 │
 ├── .gitignore
 ├── requirements.txt
@@ -361,8 +356,6 @@ source .venv/bin/activate
 
 ### 3. Install Python dependencies
 
-Install the dependencies listed in `requirements.txt`:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -448,27 +441,15 @@ __pycache__/
 *.sqlite
 .env
 data/uploads/
-data/_temp_*
-data/user_*
+data/_temp*
+data/user*
 data/uploaded_transactions_*.csv
 data/budget_limits.json
 data/savings_plans.json
 .streamlit/secrets.toml
 ```
 
-This keeps local databases, uploaded financial information, temporary files, virtual environments, and other machine-specific files out of the public repository.
-
----
-
-## 📓 Exploratory Data Analysis
-
-The project contains:
-
-```text
-notebooks/data_analysis.ipynb
-```
-
-The notebook supports exploratory analysis of transaction data and spending patterns and provides a development reference for the application's analytical functionality.
+This helps keep local databases, uploaded financial information, temporary files, virtual environments, and other machine-specific files out of the public repository.
 
 ---
 
@@ -507,7 +488,6 @@ Possible future improvements include:
 - Additional financial-health analysis
 - Deployment support for environments where local Ollama processing is available
 
-
 ---
 
 ## ⚠️ Disclaimer
@@ -515,5 +495,3 @@ Possible future improvements include:
 FinSight-AI is an educational and portfolio project.
 
 It does not provide regulated financial advice, connect directly to bank accounts, or execute financial transactions. AI-generated explanations are informational and should not replace professional financial advice.
-
----
