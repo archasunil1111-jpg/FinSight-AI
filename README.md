@@ -18,8 +18,11 @@ The application separates financial calculations from AI-generated explanations.
 - Identify high-spending and unusual transactions
 - Generate visual summaries of transaction data
 - Explore transaction data through a Jupyter notebook
+- Save analyzed transactions
+- View saved transaction records
+- Generate AI-based financial advice from analyzed data
 
-### 💰 Financial Overview
+### 💰 Personal Financial Information
 
 - Track monthly income
 - Track current savings
@@ -27,26 +30,6 @@ The application separates financial calculations from AI-generated explanations.
 - Track family support
 - Calculate expenses
 - Calculate remaining monthly cash flow
-- View transaction count and spending statistics
-
-### 🔁 Recurring Bills
-
-- Add recurring monthly expenses
-- Store bill categories and amounts
-- Track recurring monthly-bill totals
-- Store recurring due dates
-- View recurring financial commitments separately from transaction analysis
-- Deactivate recurring bills when required
-
-### 🎯 Financial Goals
-
-- Create financial goals
-- Set target amounts
-- Track current progress
-- Set monthly contribution amounts
-- Calculate remaining amounts
-- Track goal deadlines
-- Monitor progress toward financial targets
 
 ### 💼 Budget & Savings Planning
 
@@ -74,6 +57,40 @@ The application provides a financial-health overview using application-calculate
 - Emergency readiness
 - Factors affecting the financial-health result
 - Suggested areas for improvement
+
+### 📊 Financial Overview
+
+The main financial dashboard provides an overview of:
+
+- Monthly income
+- Expenses
+- Family support
+- Remaining cash flow
+- Current savings
+- Transaction count
+- Average expense
+- Highest expense
+- Top spending category
+- Savings information
+
+### 🔁 Recurring Bills
+
+- Add recurring monthly expenses
+- Store bill categories and amounts
+- Track recurring monthly-bill totals
+- Store recurring due dates
+- View recurring financial commitments separately from transaction analysis
+- Deactivate recurring bills when required
+
+### 🎯 Financial Goals
+
+- Create financial goals
+- Set target amounts
+- Track current progress
+- Set monthly contribution amounts
+- Calculate remaining amounts
+- Track goal deadlines
+- Monitor progress toward financial targets
 
 ### 🤖 AI Financial Agent
 
@@ -114,61 +131,95 @@ Local databases, uploaded user files, temporary files, Python cache files, and v
 
 ## 🖼️ Screenshots
 
-### 🔐 Login
+The following screenshots demonstrate the main FinSight-AI application workflow.
+
+### 1. 🔐 Login / Authentication
 
 ![FinSight-AI Login](screenshots/login.png)
 
-Authentication and welcome screen for accessing the FinSight-AI workspace.
+The login screen provides authentication and access to the FinSight-AI workspace.
 
-### 📊 Financial Overview
+---
 
-![Financial Overview](screenshots/financial.png)
-
-Main financial dashboard showing financial information, spending statistics, savings information, cash flow, and transaction insights.
-
-### 💰 Personal Financial Information
+### 2. 💰 Personal Financial Information
 
 ![Personal Financial Information](screenshots/salary.png)
 
-Screen for entering and updating personal financial information such as monthly income, current savings, family support, and monthly savings goals.
+Allows users to enter and update financial information such as monthly income, current savings, family support, and monthly savings goals.
 
-### 💼 Budget Planner
+---
+
+### 3. 📊 Transaction Analysis / Financial Insights
+
+![Transaction Analysis](screenshots/transaction1.png)
+
+Allows users to upload transaction data and analyze spending patterns, financial statistics, spending categories, high-spending transactions, unusual transactions, and other financial insights.
+
+---
+
+### 4. 📋 Transaction Data / AI Advice
+
+![Transaction Data and AI Advice](screenshots/transaction2%281%29.png)
+
+Displays transaction records and top transactions, with functionality for saving analyzed transactions, viewing saved transactions, and generating AI-based financial advice.
+
+---
+
+### 5. 💼 Budget Planner
 
 ![Budget Planner](screenshots/budgetplanner.png)
 
-Allows users to define monthly spending limits for different financial categories and compare planned budgets with actual spending.
+Allows users to configure monthly spending limits for different categories and compare planned budgets with actual financial activity.
 
-### 💰 Savings Planner
+---
+
+### 6. 💰 Savings Planner
 
 ![Savings Planner](screenshots/savingsplanner.png)
 
-Provides savings-planning information including income, expenses, current savings, potential monthly savings, savings targets, monthly contributions, and target duration.
+Provides savings-planning information including potential monthly savings, savings targets, monthly contributions, target duration, feasibility, and emergency-fund requirements.
 
-### 🚨 Emergency Fund Planner
+---
+
+### 7. 🚨 Emergency Fund Planner
 
 ![Emergency Fund Planner](screenshots/emergencyfund.png)
 
-Calculates emergency-fund requirements, funding gaps, progress, and provides a local AI-generated explanation based on the calculated information.
+Calculates emergency-fund requirements, funding gaps, progress, and provides an AI-generated explanation based on the calculated financial information.
 
-### ❤️ Financial Health
+---
 
-![Financial Health](screenshots/finanacialhealth.png)
+### 8. ❤️ Financial Health
+
+![Financial Health](screenshots/financialhealth.png)
 
 Provides an overview of financial health using cash flow, spending, savings, and emergency-readiness information.
 
-### 🎯 Financial Goals
+---
+
+### 9. 📊 Financial Overview / Dashboard
+
+![Financial Overview](screenshots/finanacial.png)
+
+The main dashboard provides an overview of income, expenses, family support, remaining cash flow, savings, transaction statistics, average expense, highest expense, and top spending category.
+
+---
+
+### 10. 🔁 Recurring Bills
+
+![Recurring Bills](screenshots/recurringbill.png)
+
+Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
+
+---
+
+### 11. 🎯 Financial Goals
 
 ![Financial Goals](screenshots/goal.png)
 
 Allows users to create and track financial goals using target amounts, current progress, monthly contributions, and target dates.
 
-### 🔁 Recurring Bills
-
-![Recurring Bills](screenshots/recuringbill.png)
-
-Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
-
-> Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
+> **Note:** Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
 
 ---
 
@@ -214,14 +265,16 @@ FinSight-AI/
 │
 ├── screenshots/
 │   ├── login.png
-│   ├── financial.png
 │   ├── salary.png
+│   ├── transaction1.png
+│   ├── transaction2(1).png
 │   ├── budgetplanner.png
 │   ├── savingsplanner.png
 │   ├── emergencyfund.png
-│   ├── finanacialhealth.png
-│   ├── goal.png
-│   └── recuringbill.png
+│   ├── financialhealth.png
+│   ├── finanacial.png
+│   ├── recurringbill.png
+│   └── goal.png
 │
 ├── .gitignore
 ├── requirements.txt
@@ -264,11 +317,11 @@ The `data` directory contains repository-safe sample transaction data.
 
 Local databases and user-specific uploaded financial files are excluded through `.gitignore`.
 
-The application can work with uploaded transaction data without requiring those personal files to be committed to GitHub.
+The application can work with uploaded transaction data without requiring personal financial files to be committed to GitHub.
 
 ---
 
-## 📓 Notebook
+## 📓 Exploratory Data Analysis
 
 The project includes an exploratory data-analysis notebook:
 
@@ -396,7 +449,7 @@ Streamlit will display the local application URL in the terminal.
 
 ## 📦 Python Dependencies
 
-The main Python dependencies are listed in:
+The project's Python dependencies are listed in:
 
 ```text
 requirements.txt
@@ -465,6 +518,8 @@ FinSight-AI was developed as a practical portfolio project combining:
 - AI-assisted financial explanations
 - Budget tracking
 - Savings planning
+- Emergency-fund planning
+- Financial-health analysis
 - Financial goal tracking
 - Recurring-bill management
 - Privacy-focused local AI processing
@@ -495,3 +550,13 @@ Possible future improvements include:
 FinSight-AI is an educational and portfolio project.
 
 It does not provide regulated financial advice, connect directly to bank accounts, or execute financial transactions. AI-generated explanations are informational and should not replace professional financial advice.
+
+---
+
+## 👩‍💻 Author
+
+**Archa Sunil**
+
+B.Tech Artificial Intelligence & Machine Learning
+
+GitHub: **archasunil1111-jpg**
