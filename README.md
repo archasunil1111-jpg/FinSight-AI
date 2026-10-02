@@ -122,13 +122,14 @@ Authentication and welcome screen for accessing the FinSight-AI workspace.
 
 ### 📊 Financial Overview
 
-![Financial Overview](screenshots/financial.png)
+![Financial Overview](screenshots/salary.png)
 
 Main financial dashboard showing financial information, spending statistics, savings information, cash flow, and transaction insights.
 
 ### 💰 Personal Financial Information
 
-![Personal Financial Information](screenshots/salary.png)
+
+![Personal Financial Information](screenshots/financial.png)
 
 Screen for entering and updating personal financial information such as monthly income, current savings, family support, and monthly savings goals.
 
