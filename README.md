@@ -2,9 +2,11 @@
 
 **Personal Finance Intelligence Assistant**
 
-FinSight-AI is a privacy-focused personal finance application built with **Python and Streamlit**. It analyzes transaction data, tracks personal financial information, manages recurring bills and financial goals, and provides financial explanations using a locally running **Qwen3:4B** model through **Ollama**.
+FinSight-AI is a privacy-focused personal finance application built with **Python and Streamlit**. It analyzes transaction data, tracks personal financial information, manages budgets, savings plans, recurring bills, financial goals, emergency-fund planning, and financial health information.
 
-The application separates financial calculations from AI-generated explanations. Financial values are calculated by the application first, and the local AI assistant receives the prepared financial context to explain the results.
+The application also provides financial explanations through a locally running **Qwen3:4B** model using **Ollama**.
+
+FinSight-AI separates financial calculations from AI-generated explanations. Financial values are calculated by the application first, and the local AI assistant receives the prepared financial context to explain the results.
 
 ---
 
@@ -29,38 +31,29 @@ The application separates financial calculations from AI-generated explanations.
 - Calculate remaining monthly cash flow
 - View transaction count and spending statistics
 
-### 🔁 Recurring Bills
+### 💼 Budget Planning
 
-- Add recurring monthly expenses
-- Store bill categories and amounts
-- Track recurring monthly-bill totals
-- Store recurring due dates
-- View recurring financial commitments separately from transaction analysis
-- Deactivate recurring bills when required
+- Set monthly spending limits
+- Organize budgets by financial categories
+- Track planned spending limits
+- Compare budget information with financial activity
+- Manage savings-related budget allocations
 
-### 🎯 Financial Goals
+### 💰 Savings Planning
 
-- Create financial goals
-- Set target amounts
-- Track current progress
-- Set monthly contribution amounts
-- Calculate remaining amounts
-- Track goal deadlines
-- Monitor progress toward financial targets
-
-### 💼 Budget & Savings Planning
-
-- Store monthly budget limits
-- Create and manage savings plans
-- Track planned savings contributions
-- Compare planned budgets with financial activity
-- Keep budgeting and savings information separate from transaction analysis
+- Track income and expenses
+- View current savings
+- Calculate potential monthly savings
+- Set savings targets
+- Set desired monthly contributions
+- Estimate target duration
+- Evaluate savings feasibility
 
 ### 🚨 Emergency Fund Planning
 
 - Calculate emergency-fund requirements
 - Support different emergency-fund target periods
-- Calculate funding gaps
+- Calculate emergency-fund funding gaps
 - Track emergency-fund progress
 - Provide an AI-generated explanation based on calculated financial information
 
@@ -96,7 +89,90 @@ This creates a simple separation:
 
 The language model is therefore used primarily for contextual explanations rather than being responsible for the underlying financial calculations.
 
-### 🔐 Privacy-Focused AI
+### 🔁 Recurring Bills
+
+- Add recurring monthly expenses
+- Store bill categories and amounts
+- Track recurring monthly-bill totals
+- Store recurring due dates
+- View recurring financial commitments separately from transaction analysis
+- Deactivate recurring bills when required
+
+### 🎯 Financial Goals
+
+- Create financial goals
+- Set target amounts
+- Track current progress
+- Set monthly contribution amounts
+- Calculate remaining amounts
+- Track goal deadlines
+- Monitor progress toward financial targets
+
+---
+
+## 🖼️ Screenshots
+
+The following screenshots demonstrate the main FinSight-AI workflow and application features.
+
+### 1. 📊 Dashboard / Financial Overview
+
+![FinSight-AI Financial Dashboard](screenshots/financial.png)
+
+The main dashboard provides an overview of income, expenses, savings, family support, remaining balance, transaction statistics, and spending information.
+
+### 2. 📈 Transaction Analysis
+
+Transaction analysis allows users to upload and analyze transaction data, examine spending patterns, calculate financial statistics, and identify unusual or high-spending transactions.
+
+### 3. 💼 Budget Planner
+
+![FinSight-AI Budget Planner](screenshots/budgetplanner.png)
+
+The Budget Planner allows users to define monthly spending limits for different financial categories and compare planned budgets with financial activity.
+
+### 4. 💰 Savings Planner
+
+![FinSight-AI Savings Planner](screenshots/savingsplanner.png)
+
+The Savings Planner provides information about income, expenses, current savings, potential monthly savings, savings targets, monthly contributions, target duration, and savings feasibility.
+
+### 5. 🚨 Emergency Fund Planner
+
+![FinSight-AI Emergency Fund Planner](screenshots/emergencyfund.png)
+
+The Emergency Fund Planner calculates emergency-fund requirements, funding gaps, progress, and provides an AI-generated explanation based on the calculated information.
+
+### 6. ❤️ Financial Health
+
+![FinSight-AI Financial Health](screenshots/financialhealth.png)
+
+The Financial Health section provides an overview using cash flow, spending, savings, and emergency-readiness information.
+
+### 7. 🤖 AI Financial Agent
+
+The AI Financial Agent allows users to ask contextual financial questions and receive explanations based on financial information prepared by the application.
+
+The assistant uses the locally running **Qwen3:4B** model through **Ollama**.
+
+> The AI Financial Agent screenshot is not included here because no corresponding screenshot file is currently included in the repository.
+
+### 8. 🔁 Recurring Bills
+
+![FinSight-AI Recurring Bills](screenshots/recurringbill.png)
+
+The Recurring Bills section allows users to add and manage recurring expenses using bill names, amounts, due dates, frequencies, and categories.
+
+### 9. 🎯 Financial Goals
+
+![FinSight-AI Financial Goals](screenshots/goal.png)
+
+The Financial Goals section allows users to create and track financial goals using target amounts, current progress, monthly contributions, and target dates.
+
+> Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
+
+---
+
+## 🔐 Privacy-Focused AI
 
 FinSight-AI uses **Ollama** to run the language model locally.
 
@@ -109,67 +185,6 @@ The AI assistant:
 - Uses a locally running **Qwen3:4B** model for explanations
 
 Local databases, uploaded user files, temporary files, Python cache files, and virtual-environment files are excluded from Git using `.gitignore`.
-
----
-
-## 🖼️ Screenshots
-
-### 🔐 Login
-
-![FinSight-AI Login](screenshots/login.png)
-
-Authentication and welcome screen for accessing the FinSight-AI workspace.
-
-### 📊 Financial Overview
-
-![Financial Overview](screenshots/salary.png)
-
-Main financial dashboard showing financial information, spending statistics, savings information, cash flow, and transaction insights.
-
-### 💰 Personal Financial Information
-
-
-![Personal Financial Information](screenshots/financial.png)
-
-Screen for entering and updating personal financial information such as monthly income, current savings, family support, and monthly savings goals.
-
-### 💼 Budget Planner
-
-![Budget Planner](screenshots/budgetplanner.png)
-
-Allows users to define monthly spending limits for different financial categories and compare planned budgets with actual spending.
-
-### 💰 Savings Planner
-
-![Savings Planner](screenshots/savingsplanner.png)
-
-Provides savings-planning information including income, expenses, current savings, potential monthly savings, savings targets, monthly contributions, and target duration.
-
-### 🚨 Emergency Fund Planner
-
-![Emergency Fund Planner](screenshots/emergencyfund.png)
-
-Calculates emergency-fund requirements, funding gaps, progress, and provides a local AI-generated explanation based on the calculated information.
-
-### ❤️ Financial Health
-
-![Financial Health](screenshots/finanacialhealth.png)
-
-Provides an overview of financial health using cash flow, spending, savings, and emergency-readiness information.
-
-### 🎯 Financial Goals
-
-![Financial Goals](screenshots/goal.png)
-
-Allows users to create and track financial goals using target amounts, current progress, monthly contributions, and target dates.
-
-### 🔁 Recurring Bills
-
-![Recurring Bills](screenshots/recuringbill.png)
-
-Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
-
-> Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
 
 ---
 
@@ -220,9 +235,9 @@ FinSight-AI/
 │   ├── budgetplanner.png
 │   ├── savingsplanner.png
 │   ├── emergencyfund.png
-│   ├── finanacialhealth.png
+│   ├── financialhealth.png
 │   ├── goal.png
-│   └── recuringbill.png
+│   └── recurringbill.png
 │
 ├── .gitignore
 ├── requirements.txt
@@ -269,7 +284,7 @@ The application can work with uploaded transaction data without requiring those 
 
 ---
 
-## 📓 Notebook
+## 📓 Exploratory Data Analysis
 
 The project includes an exploratory data-analysis notebook:
 
@@ -466,6 +481,8 @@ FinSight-AI was developed as a practical portfolio project combining:
 - AI-assisted financial explanations
 - Budget tracking
 - Savings planning
+- Emergency-fund planning
+- Financial health analysis
 - Financial goal tracking
 - Recurring-bill management
 - Privacy-focused local AI processing
@@ -496,3 +513,13 @@ Possible future improvements include:
 FinSight-AI is an educational and portfolio project.
 
 It does not provide regulated financial advice, connect directly to bank accounts, or execute financial transactions. AI-generated explanations are informational and should not replace professional financial advice.
+
+---
+
+## 👩‍💻 Author
+
+**Archa Sunil**
+
+B.Tech Artificial Intelligence & Machine Learning
+
+GitHub: **archasunil1111-jpg**
