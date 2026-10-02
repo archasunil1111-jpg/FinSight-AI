@@ -557,6 +557,6 @@ It does not provide regulated financial advice, connect directly to bank account
 
 **Archa Sunil**
 
-B.Tech Artificial Intelligence & Machine Learning
+
 
 GitHub: **archasunil1111-jpg**
