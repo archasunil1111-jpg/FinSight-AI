@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .venv/
 venv/
 __pycache__/
@@ -12,3 +13,46 @@ data/*.db
 .idea/
 
 *.log
+=======
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local financial/user data
+data/uploads/
+data/_temp_*
+data/user_*
+data/uploaded_transactions_*.csv
+data/budget_limits.json
+data/savings_plans.json
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+>>>>>>> 35aca27 (Complete FinSight AI finance features)
