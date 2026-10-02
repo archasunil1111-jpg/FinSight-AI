@@ -152,7 +152,7 @@ Calculates emergency-fund requirements, funding gaps, progress, and provides a l
 
 ### ❤️ Financial Health
 
-![Financial Health](screenshots/financialhealth.png)
+![Financial Health](screenshots/finanacialhealth.png)
 
 Provides an overview of financial health using cash flow, spending, savings, and emergency-readiness information.
 
@@ -164,11 +164,9 @@ Allows users to create and track financial goals using target amounts, current p
 
 ### 🔁 Recurring Bills
 
-![Recurring Bills](screenshots/recurringbill.png)
+![Recurring Bills](screenshots/recuringbill.png)
 
 Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
-
-> **Note:** The AI Financial Agent is implemented in the application, but a screenshot is not currently included in the repository.
 
 > Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
 
@@ -221,9 +219,9 @@ FinSight-AI/
 │   ├── budgetplanner.png
 │   ├── savingsplanner.png
 │   ├── emergencyfund.png
-│   ├── financialhealth.png
+│   ├── finanacialhealth.png
 │   ├── goal.png
-│   └── recurringbill.png
+│   └── recuringbill.png
 │
 ├── .gitignore
 ├── requirements.txt
@@ -355,6 +353,8 @@ source .venv/bin/activate
 ```
 
 ### 3. Install Python dependencies
+
+Install the dependencies listed in `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
