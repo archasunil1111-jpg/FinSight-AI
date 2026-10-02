@@ -2,9 +2,11 @@
 
 **Personal Finance Intelligence Assistant**
 
-FinSight-AI is a privacy-focused personal finance application built with **Python and Streamlit**. It analyzes transaction data, tracks personal financial information, manages recurring bills and financial goals, and provides financial explanations using a **locally running Qwen3:4B model through Ollama**.
+FinSight-AI is a privacy-focused personal finance application built with **Python and Streamlit**. It analyzes transaction data, tracks personal financial information, manages recurring bills and financial goals, and provides financial explanations using a locally running **Qwen3:4B** model through **Ollama**.
 
 The application separates financial calculations from AI-generated explanations. Financial values are calculated by the application first, and the local AI assistant receives the prepared financial context to explain the results.
+
+---
 
 ## ✨ Features
 
@@ -25,6 +27,7 @@ The application separates financial calculations from AI-generated explanations.
 - Track family support
 - Calculate expenses
 - Calculate remaining monthly cash flow
+- View transaction count and spending statistics
 
 ### 🔁 Recurring Bills
 
@@ -33,6 +36,7 @@ The application separates financial calculations from AI-generated explanations.
 - Track recurring monthly-bill totals
 - Store recurring due dates
 - View recurring financial commitments separately from transaction analysis
+- Deactivate recurring bills when required
 
 ### 🎯 Financial Goals
 
@@ -42,13 +46,34 @@ The application separates financial calculations from AI-generated explanations.
 - Set monthly contribution amounts
 - Calculate remaining amounts
 - Track goal deadlines
+- Monitor progress toward financial targets
 
 ### 💼 Budget & Savings Planning
 
-- Store budget limits
+- Store monthly budget limits
 - Create and manage savings plans
 - Track planned savings contributions
+- Compare planned budgets with financial activity
 - Keep budgeting and savings information separate from transaction analysis
+
+### 🚨 Emergency Fund Planning
+
+- Calculate emergency-fund requirements
+- Support different emergency-fund target periods
+- Calculate funding gaps
+- Track emergency-fund progress
+- Provide an AI-generated explanation based on calculated financial information
+
+### ❤️ Financial Health
+
+The application provides a financial-health overview using application-calculated information such as:
+
+- Cash flow
+- Spending control
+- Savings health
+- Emergency readiness
+- Factors affecting the financial-health result
+- Suggested areas for improvement
 
 ### 🤖 AI Financial Agent
 
@@ -61,12 +86,15 @@ FinSight-AI includes a local AI financial assistant that can explain prepared fi
 - Financial goals
 - Budget information
 - Emergency savings
+- Financial planning
 
 The application calculates relevant financial values first and then provides the prepared context to the local AI model.
 
 This creates a simple separation:
 
 **Application calculates → Financial Agent prepares context → Local AI explains**
+
+The language model is therefore used primarily for contextual explanations rather than being responsible for the underlying financial calculations.
 
 ### 🔐 Privacy-Focused AI
 
@@ -78,9 +106,75 @@ The AI assistant:
 - Does not execute financial transactions
 - Does not make payments
 - Receives financial context prepared by the application
-- Uses a locally running Qwen3:4B model for explanations
+- Uses a locally running **Qwen3:4B** model for explanations
 
 Local databases, uploaded user files, temporary files, Python cache files, and virtual-environment files are excluded from Git using `.gitignore`.
+
+---
+
+## 🖼️ Screenshots
+
+### 🔐 Login
+
+![FinSight-AI Login](screenshots/login.png)
+
+Authentication and welcome screen for accessing the FinSight-AI workspace.
+
+### 📊 Financial Overview
+
+![Financial Overview](screenshots/financial.png)
+
+Main financial dashboard showing financial information, spending statistics, savings information, cash flow, and transaction insights.
+
+### 💰 Personal Financial Information
+
+![Personal Financial Information](screenshots/salary.png)
+
+Screen for entering and updating personal financial information such as monthly income, current savings, family support, and monthly savings goals.
+
+### 💼 Budget Planner
+
+![Budget Planner](screenshots/budgetplanner.png)
+
+Allows users to define monthly spending limits for different financial categories and compare planned budgets with actual spending.
+
+### 💰 Savings Planner
+
+![Savings Planner](screenshots/savingsplanner.png)
+
+Provides savings-planning information including income, expenses, current savings, potential monthly savings, savings targets, monthly contributions, and target duration.
+
+### 🚨 Emergency Fund Planner
+
+![Emergency Fund Planner](screenshots/emergencyfund.png)
+
+Calculates emergency-fund requirements, funding gaps, progress, and provides a local AI-generated explanation based on the calculated information.
+
+### ❤️ Financial Health
+
+![Financial Health](screenshots/financialhealth.png)
+
+Provides an overview of financial health using cash flow, spending, savings, and emergency-readiness information.
+
+### 🎯 Financial Goals
+
+![Financial Goals](screenshots/goal.png)
+
+Allows users to create and track financial goals using target amounts, current progress, monthly contributions, and target dates.
+
+### 🔁 Recurring Bills
+
+![Recurring Bills](screenshots/recurringbill.png)
+
+Allows users to add and manage recurring expenses with bill names, amounts, due dates, frequencies, and categories.
+
+### 🤖 AI Financial Agent
+
+![AI Financial Agent](screenshots/ai-financial-agent.png)
+
+Local AI financial assistant that explains application-prepared financial information and answers contextual financial questions.
+
+> Screenshots use demonstration data and are intended to illustrate the application's interface and functionality.
 
 ---
 
@@ -124,40 +218,72 @@ FinSight-AI/
 ├── notebooks/
 │   └── data_analysis.ipynb
 │
+├── screenshots/
+│   ├── login.png
+│   ├── financial.png
+│   ├── salary.png
+│   ├── budgetplanner.png
+│   ├── savingsplanner.png
+│   ├── emergencyfund.png
+│   ├── financialhealth.png
+│   ├── goal.png
+│   ├── recurringbill.png
+│   
+│
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
 
-### Backend
+---
 
-The `backend` directory contains the application's financial processing and AI-related logic.
+## 🧩 Backend
 
-- `analysis.py` → transaction and financial analysis
-- `database.py` → SQLite database operations
-- `llm.py` → local LLM interaction
-- `ai_advice.py` → AI-generated financial explanations
-- `financial_agent.py` → financial context preparation and AI-agent logic
-- `budget_store.py` → budget-related data management
-- `savings_plan_store.py` → savings-plan data management
-- `__init__.py` → Python package initialization
+The `backend` directory contains the application's financial processing, data-management, and AI-related logic.
 
-### Frontend
+| File | Purpose |
+|---|---|
+| `analysis.py` | Transaction and financial analysis |
+| `database.py` | SQLite database operations |
+| `llm.py` | Local LLM interaction through Ollama |
+| `ai_advice.py` | AI-generated financial explanations |
+| `financial_agent.py` | Financial context preparation and AI-agent logic |
+| `budget_store.py` | Budget-related data management |
+| `savings_plan_store.py` | Savings-plan data management |
+| `__init__.py` | Python package initialization |
 
-The `frontend` directory contains the Streamlit interface.
+---
 
-- `app.py` → main application interface
-- `bills.py` → recurring-bill functionality
+## 🖥️ Frontend
 
-### Data
+The `frontend` directory contains the Streamlit application interface.
+
+| File | Purpose |
+|---|---|
+| `app.py` | Main FinSight-AI application interface |
+| `bills.py` | Recurring-bill functionality |
+
+---
+
+## 📊 Data
 
 The `data` directory contains repository-safe sample transaction data.
 
-Local databases and user-specific uploaded financial data are excluded through `.gitignore`.
+Local databases and user-specific uploaded financial files are excluded through `.gitignore`.
 
-### Notebook
+The application can work with uploaded transaction data without requiring those personal files to be committed to GitHub.
 
-`notebooks/data_analysis.ipynb` contains exploratory data analysis used to examine transaction data and spending patterns.
+---
+
+## 📓 Notebook
+
+The project includes an exploratory data-analysis notebook:
+
+```text
+notebooks/data_analysis.ipynb
+```
+
+The notebook is used to explore transaction data, examine spending patterns, and support the development of the application's analytical functionality.
 
 ---
 
@@ -178,7 +304,7 @@ Local databases and user-specific uploaded financial data are excluded through `
                         ▼
              ┌─────────────────────┐
              │ Financial Analysis  │
-             │  Calculations       │
+             │    Calculations     │
              └──────────┬──────────┘
                         │
                         ▼
@@ -195,9 +321,9 @@ Local databases and user-specific uploaded financial data are excluded through `
              └─────────────────────┘
 ```
 
-The application follows a simple architecture:
+The application follows this architecture:
 
-**User → Streamlit → Financial calculations → Verified context → Local AI explanation**
+**User → Streamlit → Financial calculations → Prepared context → Local AI explanation**
 
 The purpose of this separation is to keep numerical financial calculations within the application rather than relying on the language model to perform the underlying calculations.
 
@@ -235,7 +361,7 @@ source .venv/bin/activate
 
 ### 3. Install Python dependencies
 
-Install the dependencies from `requirements.txt`:
+Install the dependencies listed in `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
@@ -295,9 +421,9 @@ Ollama and the Qwen3:4B model are installed separately because they are local AI
 
 ## 🔒 AI Safety & Privacy
 
-FinSight-AI is designed as a **personal finance analysis and learning project**.
+FinSight-AI is designed as a personal finance analysis and learning project.
 
-Important limitations:
+### Important limitations
 
 - The application does not connect directly to a bank account.
 - The application does not execute financial transactions.
@@ -306,26 +432,49 @@ Important limitations:
 - Financial calculations are performed by the application before AI explanation.
 - Local databases and user-uploaded financial files are excluded from Git.
 - The application should not be treated as professional financial advice or a replacement for a qualified financial advisor.
+- Users should independently verify important financial decisions.
 
-Users should independently verify important financial decisions.
+---
+
+## 🔐 Repository Privacy
+
+The `.gitignore` file excludes local and potentially sensitive files such as:
+
+```text
+.venv/
+__pycache__/
+*.pyc
+*.db
+*.sqlite
+.env
+data/uploads/
+data/_temp_*
+data/user_*
+data/uploaded_transactions_*.csv
+data/budget_limits.json
+data/savings_plans.json
+.streamlit/secrets.toml
+```
+
+This keeps local databases, uploaded financial information, temporary files, virtual environments, and other machine-specific files out of the public repository.
 
 ---
 
 ## 📓 Exploratory Data Analysis
 
-The project includes a Jupyter notebook:
+The project contains:
 
 ```text
 notebooks/data_analysis.ipynb
 ```
 
-The notebook is used to explore transaction data, examine spending patterns, and support the development of the application's analytical functionality.
+The notebook supports exploratory analysis of transaction data and spending patterns and provides a development reference for the application's analytical functionality.
 
 ---
 
 ## 🎯 Project Purpose
 
-FinSight-AI was developed as a practical project combining:
+FinSight-AI was developed as a practical portfolio project combining:
 
 - Data analysis
 - Financial data processing
@@ -337,6 +486,7 @@ FinSight-AI was developed as a practical project combining:
 - Savings planning
 - Financial goal tracking
 - Recurring-bill management
+- Privacy-focused local AI processing
 
 The project demonstrates how traditional application logic and local generative AI can be combined while keeping financial calculations separate from language-model-generated explanations.
 
@@ -354,12 +504,16 @@ Possible future improvements include:
 - Improved AI-agent context handling
 - Automated testing
 - Better error handling and validation
+- Additional financial-health analysis
 - Deployment support for environments where local Ollama processing is available
+
 
 ---
 
 ## ⚠️ Disclaimer
 
-FinSight-AI is an **educational and portfolio project**.
+FinSight-AI is an educational and portfolio project.
 
-It does not provide regulated financial advice, connect directly to bank accounts, or execute financial transactions. AI-generated explanations should be treated as informational and should not replace professional financial advice.
+It does not provide regulated financial advice, connect directly to bank accounts, or execute financial transactions. AI-generated explanations are informational and should not replace professional financial advice.
+
+---
